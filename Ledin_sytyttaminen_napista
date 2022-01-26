@@ -1,0 +1,19 @@
+int nappi = 2; 
+int ledPina = 12; 
+int ledPinb = 13; 
+int napinTila = 0;  
+void setup() { 
+  pinMode(ledPina, OUTPUT); 
+  pinMode(nappi, INPUT); 
+  pinMode(ledPinb, OUTPUT); 
+}  
+void loop() { 
+  napinTila = digitalRead(nappi); 
+  if(napinTila == HIGH) { 
+    digitalWrite(ledPina, HIGH); 
+  }
+  else { 
+    digitalWrite(ledPinb, HIGH); 
+    digitalWrite(ledPina, LOW); 
+  } 
+} 
